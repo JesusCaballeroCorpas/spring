@@ -57,7 +57,8 @@ public class CalculadorOfertasTest {
 		
 		lineas.add(linea);
 		
-		Factura factura = new Factura();
+//		Factura factura = new Factura();
+		Factura factura = context.getBean(Factura.class);
 		factura.setLineas(lineas);
 		
 		

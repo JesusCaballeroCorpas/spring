@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 
+import es.uma.informatica.spring1.domain.Factura;
+
 @Configurable
 public class Configuracion {
 	
@@ -18,5 +20,10 @@ public class Configuracion {
 		CalculadorOfertas calculador = new CalculadorOfertas(ofertas);
 		
 		return calculador;
+	}
+	
+	@Bean
+	public Factura crearFactura(){
+		return new Factura();
 	}
 }
